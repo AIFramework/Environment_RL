@@ -1,9 +1,9 @@
 ﻿
 using System.Drawing;
 
-namespace Environment_RL.Game
+namespace EnvLib.GameTurrel
 {
-    class Turrel : IGameObj
+    public class Turrel : IGameObj
     {
         public int CoordX { get; set; }
         public int CoordY { get; set; }
@@ -15,14 +15,14 @@ namespace Environment_RL.Game
 
         public Turrel()
         {
-            int h = 7, w = 22, h2 = 15, w2= 7;
+            int h = 7, w = 22, h2 = 15, w2 = 7;
 
             sprite = new Bitmap(w, h2);
             using (Graphics box = Graphics.FromImage(sprite))
             {
 
-                box.FillRectangle(new SolidBrush(Color.Black), new Rectangle(0, h2-h, w, h));
-                box.FillRectangle(new SolidBrush(Color.Black), new Rectangle(w/2-w2/2, 0, w2, h2));
+                box.FillRectangle(new SolidBrush(Color.Black), new Rectangle(0, h2 - h, w, h));
+                box.FillRectangle(new SolidBrush(Color.Black), new Rectangle(w / 2 - w2 / 2, 0, w2, h2));
 
             }
 
@@ -32,9 +32,11 @@ namespace Environment_RL.Game
             W = w;
         }
 
-        public Bitmap GetSprite()
+        public Bitmap GetSprite() => sprite;
+
+        public void Update()
         {
-            return sprite;
+
         }
     }
 }

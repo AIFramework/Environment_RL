@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Environment_RL</RootNamespace>
     <AssemblyName>Environment_RL</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,8 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\smart digital\Documents\GitHub\AI C#\AIFrameworkOpen\src\AICrossPlatform\bin\Debug\netstandard2.0\AI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,14 +57,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Game\Box.cs" />
-    <Compile Include="Game\Bullet.cs" />
-    <Compile Include="Game\Info.cs" />
-    <Compile Include="Game\MainGame.cs" />
-    <Compile Include="Game\IGameObj.cs" />
-    <Compile Include="Game\Phisics.cs" />
-    <Compile Include="Game\PlayingField.cs" />
-    <Compile Include="Game\Turrel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -72,6 +70,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -85,6 +84,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\EnvLib\EnvLib.csproj">
+      <Project>{bed67e0a-6c65-4c6c-8ac3-4fa7547a8846}</Project>
+      <Name>EnvLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\smart digital\Documents\GitHub\AI C#\AIFrameworkOpen\src\AIChartCV\AIChartCV.csproj">
+      <Project>{2ED3435F-F827-41E2-82B4-ED781A16B156}</Project>
+      <Name>AIChartCV</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

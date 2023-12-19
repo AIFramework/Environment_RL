@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Environment_RL.Game
+namespace EnvLib.GameTurrel
 {
     public class PlayingField : List<IGameObj>
     {
-       
+
         public int W { get; set; }
         public int H { get; set; }
         public Color BackGround { get; set; }
@@ -33,8 +29,8 @@ namespace Environment_RL.Game
         /// </summary>
         public Bitmap Draw()
         {
-            Bitmap bitmap = new Bitmap(W,H);
-            Destroyer(); 
+            Bitmap bitmap = new Bitmap(W, H);
+            Destroyer();
 
             using (Graphics graphics = Graphics.FromImage(bitmap))
             {
@@ -64,6 +60,11 @@ namespace Environment_RL.Game
             }
 
             return bitmap;
+        }
+
+        public void Update()
+        {
+            foreach (var obj in this) obj.Update();
         }
 
         void Destroyer()

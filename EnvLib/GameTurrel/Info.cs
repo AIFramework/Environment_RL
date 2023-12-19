@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
-namespace Environment_RL.Game
+namespace EnvLib.GameTurrel
 {
     public class Info : IGameObj
     {
@@ -15,7 +10,7 @@ namespace Environment_RL.Game
         public int W { get; set; }
         public bool IsDestroyed { get; set; }
         bool flagMove = true;
-        Bitmap bitmap;
+        Bitmap sprite;
 
         public Info()
         {
@@ -23,7 +18,7 @@ namespace Environment_RL.Game
 
             int h = 47, w = 97;
 
-            bitmap = new Bitmap(h,w);
+            sprite = new Bitmap(h, w);
 
             CoordX = 0;
             CoordY = 0;
@@ -33,8 +28,8 @@ namespace Environment_RL.Game
 
         public void GetSprite(int score, int time)
         {
-            bitmap = new Bitmap(W, H);
-            using (Graphics graphics = Graphics.FromImage(bitmap))
+            sprite = new Bitmap(W, H);
+            using (Graphics graphics = Graphics.FromImage(sprite))
             {
                 Font font = new Font("Calibri", 9);
                 graphics.DrawString("Score: " + score, font, new SolidBrush(Color.Red), new Point(0, 0));
@@ -42,9 +37,10 @@ namespace Environment_RL.Game
             }
         }
 
-        public Bitmap GetSprite()
+        public Bitmap GetSprite() => sprite;
+
+        public void Update()
         {
-            return bitmap;
         }
     }
 }

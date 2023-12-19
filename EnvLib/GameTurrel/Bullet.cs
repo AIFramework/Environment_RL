@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Environment_RL.Game
+namespace EnvLib.GameTurrel
 {
     public class Bullet : IGameObj
     {
@@ -15,7 +15,7 @@ namespace Environment_RL.Game
         public Bullet()
         {
             sprite = new Bitmap(7, 7);
-            using(Graphics bull = Graphics.FromImage(sprite))
+            using (Graphics bull = Graphics.FromImage(sprite))
             {
 
                 bull.FillEllipse(new SolidBrush(Color.Red), new Rectangle(0, 0, 7, 7));
@@ -27,10 +27,9 @@ namespace Environment_RL.Game
             W = 7;
         }
 
-        public Bitmap GetSprite()
-        {
-            CoordY -= 3;
-            return sprite;
-        }
+        public void Update() => CoordY -= 3;
+
+        public Bitmap GetSprite() => sprite;
+
     }
 }

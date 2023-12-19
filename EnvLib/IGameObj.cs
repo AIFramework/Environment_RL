@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 
-namespace Environment_RL.Game
+namespace EnvLib
 {
     /// <summary>
     /// Игровой объект
@@ -17,6 +12,8 @@ namespace Environment_RL.Game
         int H { get; set; }
         int W { get; set; }
         bool IsDestroyed { get; set; }
+
+        void Update();
 
         Bitmap GetSprite();
     }

@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Environment_RL.Game
+namespace EnvLib.GameTurrel
 {
     public class Box : IGameObj
     {
@@ -36,20 +32,15 @@ namespace Environment_RL.Game
             W = w;
         }
 
-        public Bitmap GetSprite()
+        public Bitmap GetSprite() => sprite;
+
+
+        public void Update()
         {
-            if (flagMove)
-            {
-                CoordY -= 1;
-            }
-            else
-            {
-                CoordY += 1;
-            }
+            if (flagMove) CoordY -= 1;
+            else CoordY += 1;
 
             flagMove = !flagMove;
-
-            return sprite;
         }
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Environment_RL.Game
+﻿namespace EnvLib.GameTurrel
 {
     public static class Physics
     {
@@ -27,7 +21,7 @@ namespace Environment_RL.Game
             //bool yE = y1 > y2 && y1 < endY2;
 
 
-            return (x && y)||(xE&&y);
+            return (x && y) || (xE && y);
         }
     }
 }
