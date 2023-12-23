@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aggregator\KNN1D.cs" />
+    <Compile Include="ComplexObjectControl\Base\ComplexObjectBase.cs" />
+    <Compile Include="ComplexObjectControl\Base\ObjectInversModel.cs" />
     <Compile Include="GameTurrel\Box.cs" />
     <Compile Include="GameTurrel\Bullet.cs" />
     <Compile Include="IGameObj.cs" />
