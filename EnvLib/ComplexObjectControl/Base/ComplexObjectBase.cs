@@ -17,6 +17,6 @@ namespace EnvLib.ComplexObjectControl
         /// </summary>
         /// <param name="action">Вектор управляющего воздействия</param>
         /// <returns></returns>
-        public abstract Vector GetParams(Vector action);
+        public abstract Vector GetState(Vector action);
     }
 }

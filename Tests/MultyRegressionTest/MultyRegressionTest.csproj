@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\EnvLib\EnvLib.csproj" />
     <ProjectReference Include="C:\Users\smart digital\Documents\GitHub\AI C#\AIFrameworkOpen\src\AICrossPlatform\AICrossPlatform.csproj" />
   </ItemGroup>
 
