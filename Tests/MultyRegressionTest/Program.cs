@@ -11,7 +11,7 @@ neuralMultyRegressionInv.EpochesToPass = 70;
 neuralMultyRegression.EpochesToPass = 70;
 
 
-var dat = GeneratedInp(2900);
+var dat = GeneratedInp(12900);
 Vector[] inps = dat.Item1.ToArray();   // { new Vector(1, 2), new Vector(2, 2), new Vector(2, 2), new Vector(1, -2) };
 Vector[] outps = dat.Item2.ToArray(); //  { new Vector(1, 3, -1), new Vector(-2, 0, 2), new Vector(-2, 0, 2), new Vector(-1, -2, 1) };
 
